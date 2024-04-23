@@ -1,5 +1,5 @@
-
 # About sspilib
+
 ===========================
 
 Feedstock license: [BSD-3-Clause](https://github.com/AnacondaRecipes/sspilib/blob/main/LICENSE.txt)
@@ -10,9 +10,8 @@ Package license: MIT
 
 Summary: SSPI API bindings for Python
 
-
 Installing sspilib
-================
+==================
 
 `sspilib` can be installed with:
 
@@ -32,9 +31,8 @@ Terminology
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
 
-
 Updating sspilib-feedstock
-========================
+==========================
 
 If you would like to improve the sspilib recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
@@ -42,14 +40,14 @@ your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build.
 
 In order to produce a uniquely identifiable distribution:
- * If the version of a package **is not** being increased, please add or increase
-   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string).
- * If the version of a package **is** being increased, please remember to return
-   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string)
-   back to 0.
+
+* If the version of a package **is not** being increased, please add or increase
+  the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string).
+* If the version of a package **is** being increased, please remember to return
+  the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string)
+  back to 0.
 
 Feedstock Maintainers
 =====================
 
-* [@AddYourGitHubIdHere](https://github.com/AddYourGitHubIdHere/)
-
+* @skupr-anaconda

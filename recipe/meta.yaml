@@ -14,11 +14,14 @@ build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
+  build:
+    - {{ compiler('c') }}
   host:
     - python
     - cython >=3.0.0,<4.0.0
     - setuptools
     - pip
+    - wheel
   run:
     - python
 
