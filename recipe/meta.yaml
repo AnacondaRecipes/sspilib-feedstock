@@ -12,16 +12,13 @@ source:
 build:
   number: 0
   skip: true  # [unix]
-  script:
-    - {{ PYTHON }} -m build --wheel --skip-dependency-check --no-isolation
-    - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   build:
     - {{ compiler('c') }}
   host:
     - python
-    - python-build
     - cython >=3.0.0,<4.0.0
     - setuptools
     - pip
