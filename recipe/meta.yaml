@@ -12,7 +12,9 @@ source:
 build:
   number: 0
   skip: true  # [unix]
-  script: {{ PYTHON }} -m build --wheel --skip-dependency-check --no-isolation
+  script:
+    - {{ PYTHON }} -m build --wheel --skip-dependency-check --no-isolation
+    - {{ PYTHON }} -m pip install dist/sspilib-*.whl -vv --no-deps --no-build-isolation
 
 requirements:
   build:
