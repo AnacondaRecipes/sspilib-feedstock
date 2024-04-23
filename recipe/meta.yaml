@@ -1,0 +1,50 @@
+{% set name = "sspilib" %}
+{% set version = "0.1.0" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 58b5291553cf6220549c0f855e0e6973f4977375d8236ce47bb581efb3e9b1cf
+
+build:
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python
+    - cython >=3.0.0,<4.0.0
+    - setuptools
+    - pip
+  run:
+    - python
+
+test:
+  imports:
+    - sspilib
+  requires:
+    - pip
+  commands:
+    - pip check
+
+about:
+  home: https://github.com/jborean93/sspilib
+  dev_url: https://github.com/jborean93/sspilib
+  doc_url: https://github.com/jborean93/sspilib
+  summary: SSPI API bindings for Python
+  description: |
+    This library provides Python functions that wraps the Windows SSPI API.
+    It is designed to be both a high and low level interface
+    that other libraries can easily leverage to use with SSPI integration.
+    The high level interface is under the sspilib namespace whereas the low-level interface
+    is under the sspilib.raw interface.
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+
+extra:
+  recipe-maintainers:
+    - AddYourGitHubIdHere
